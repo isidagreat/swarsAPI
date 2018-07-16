@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3998ABBA20F552E400CFE191 /* MovieeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3998ABB920F552E400CFE191 /* MovieeTableViewController.swift */; };
+		3998ABBC20F561FC00CFE191 /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3998ABBB20F561FC00CFE191 /* StarWarsModel.swift */; };
 		39E1E18D20F533E2005A63D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E1E18C20F533E2005A63D9 /* AppDelegate.swift */; };
-		39E1E18F20F533E2005A63D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E1E18E20F533E2005A63D9 /* ViewController.swift */; };
 		39E1E19220F533E2005A63D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E1E19020F533E2005A63D9 /* Main.storyboard */; };
 		39E1E19520F533E2005A63D9 /* StarWarsEncyclopedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39E1E19320F533E2005A63D9 /* StarWarsEncyclopedia.xcdatamodeld */; };
 		39E1E19720F533E3005A63D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E1E19620F533E3005A63D9 /* Assets.xcassets */; };
 		39E1E19A20F533E3005A63D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E1E19820F533E3005A63D9 /* LaunchScreen.storyboard */; };
 		39E1E1A520F533E3005A63D9 /* StarWarsEncyclopediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E1E1A420F533E3005A63D9 /* StarWarsEncyclopediaTests.swift */; };
 		39E1E1B020F533E3005A63D9 /* StarWarsEncyclopediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E1E1AF20F533E3005A63D9 /* StarWarsEncyclopediaUITests.swift */; };
+		39E1E1BE20F5349B005A63D9 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E1E1BD20F5349B005A63D9 /* PeopleTableViewController.swift */; };
+		39EF8A2E20F69F8F002E4DC7 /* PeopleViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EF8A2D20F69F8F002E4DC7 /* PeopleViewerViewController.swift */; };
+		39EF8A3020F69FFA002E4DC7 /* MovieViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EF8A2F20F69FFA002E4DC7 /* MovieViewerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3998ABB920F552E400CFE191 /* MovieeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieeTableViewController.swift; sourceTree = "<group>"; };
+		3998ABBB20F561FC00CFE191 /* StarWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
 		39E1E18920F533E2005A63D9 /* StarWarsEncyclopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsEncyclopedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E1E18C20F533E2005A63D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		39E1E18E20F533E2005A63D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		39E1E19120F533E2005A63D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39E1E19420F533E2005A63D9 /* StarWarsEncyclopedia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StarWarsEncyclopedia.xcdatamodel; sourceTree = "<group>"; };
 		39E1E19620F533E3005A63D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		39E1E1AB20F533E3005A63D9 /* StarWarsEncyclopediaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsEncyclopediaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E1E1AF20F533E3005A63D9 /* StarWarsEncyclopediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsEncyclopediaUITests.swift; sourceTree = "<group>"; };
 		39E1E1B120F533E3005A63D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39E1E1BD20F5349B005A63D9 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
+		39EF8A2D20F69F8F002E4DC7 /* PeopleViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewerViewController.swift; sourceTree = "<group>"; };
+		39EF8A2F20F69FFA002E4DC7 /* MovieViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,13 @@
 		39E1E18B20F533E2005A63D9 /* StarWarsEncyclopedia */ = {
 			isa = PBXGroup;
 			children = (
+				39EF8A2D20F69F8F002E4DC7 /* PeopleViewerViewController.swift */,
 				39E1E18C20F533E2005A63D9 /* AppDelegate.swift */,
-				39E1E18E20F533E2005A63D9 /* ViewController.swift */,
 				39E1E19020F533E2005A63D9 /* Main.storyboard */,
+				39EF8A2F20F69FFA002E4DC7 /* MovieViewerViewController.swift */,
+				3998ABBB20F561FC00CFE191 /* StarWarsModel.swift */,
+				3998ABB920F552E400CFE191 /* MovieeTableViewController.swift */,
+				39E1E1BD20F5349B005A63D9 /* PeopleTableViewController.swift */,
 				39E1E19620F533E3005A63D9 /* Assets.xcassets */,
 				39E1E19820F533E3005A63D9 /* LaunchScreen.storyboard */,
 				39E1E19B20F533E3005A63D9 /* Info.plist */,
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39E1E18F20F533E2005A63D9 /* ViewController.swift in Sources */,
 				39E1E18D20F533E2005A63D9 /* AppDelegate.swift in Sources */,
+				39E1E1BE20F5349B005A63D9 /* PeopleTableViewController.swift in Sources */,
+				39EF8A2E20F69F8F002E4DC7 /* PeopleViewerViewController.swift in Sources */,
+				3998ABBC20F561FC00CFE191 /* StarWarsModel.swift in Sources */,
+				39EF8A3020F69FFA002E4DC7 /* MovieViewerViewController.swift in Sources */,
+				3998ABBA20F552E400CFE191 /* MovieeTableViewController.swift in Sources */,
 				39E1E19520F533E2005A63D9 /* StarWarsEncyclopedia.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

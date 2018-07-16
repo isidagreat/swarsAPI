@@ -1,24 +1,257 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rtL-ca-WSh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--People-->
+        <scene sceneID="0ZK-KY-vK0">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="twF-FD-Sf6" customClass="PeopleTableViewController" customModule="StarWarsEncyclopedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4OP-DT-gSK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" id="jjH-yQ-tbb">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jjH-yQ-tbb" id="4IG-A5-B8q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="0XU-5x-TR4" kind="presentation" identifier="peopleViewerSegue" id="iQP-i2-IJO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="twF-FD-Sf6" id="Bgy-wb-2ei"/>
+                            <outlet property="delegate" destination="twF-FD-Sf6" id="FsD-US-2w5"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="People" id="odH-h9-b7C"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBH-w5-muf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="439.19999999999999" y="-52.623688155922046"/>
+        </scene>
+        <!--People Viewer View Controller-->
+        <scene sceneID="BVm-cU-ZB3">
+            <objects>
+                <viewController id="0XU-5x-TR4" customClass="PeopleViewerViewController" customModule="StarWarsEncyclopedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="igk-3s-e4J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: Luke Skywalker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUf-9o-FdW">
+                                <rect key="frame" x="16" y="57" width="173" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender: Female" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWe-L3-4tW">
+                                <rect key="frame" x="16" y="149" width="121" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday: 33bbbbyyy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOu-IT-YFo">
+                                <rect key="frame" x="16" y="262" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass: 4053" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZR-wL-ArJ">
+                                <rect key="frame" x="16" y="373" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iR-GQ-68h">
+                                <rect key="frame" x="127" y="522" width="120" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Go Back"/>
+                                <connections>
+                                    <action selector="exitViewButton:" destination="0XU-5x-TR4" eventType="touchUpInside" id="S2u-gv-LVg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2cz-wQ-R3y" firstAttribute="bottom" secondItem="QZR-wL-ArJ" secondAttribute="bottom" constant="273" id="2wm-Qh-trB"/>
+                            <constraint firstItem="QZR-wL-ArJ" firstAttribute="leading" secondItem="2cz-wQ-R3y" secondAttribute="leading" constant="16" id="7Kd-82-MDT"/>
+                            <constraint firstItem="2cz-wQ-R3y" firstAttribute="trailing" secondItem="qUf-9o-FdW" secondAttribute="trailing" constant="186" id="8BC-8N-We4"/>
+                            <constraint firstItem="2cz-wQ-R3y" firstAttribute="trailing" secondItem="2iR-GQ-68h" secondAttribute="trailing" constant="128" id="DJK-v4-hZQ"/>
+                            <constraint firstItem="2cz-wQ-R3y" firstAttribute="trailing" secondItem="qWe-L3-4tW" secondAttribute="trailing" constant="238" id="ER0-tr-Mkg"/>
+                            <constraint firstItem="2iR-GQ-68h" firstAttribute="leading" secondItem="2cz-wQ-R3y" secondAttribute="leading" constant="127" id="FQ7-yL-JS2"/>
+                            <constraint firstItem="QZR-wL-ArJ" firstAttribute="top" secondItem="UOu-IT-YFo" secondAttribute="bottom" constant="90" id="H9q-wp-g0r"/>
+                            <constraint firstItem="qWe-L3-4tW" firstAttribute="top" secondItem="qUf-9o-FdW" secondAttribute="bottom" constant="71" id="Hoq-3l-2xN"/>
+                            <constraint firstItem="2cz-wQ-R3y" firstAttribute="trailing" secondItem="UOu-IT-YFo" secondAttribute="trailing" constant="198" id="MYI-WA-G4z"/>
+                            <constraint firstItem="QZR-wL-ArJ" firstAttribute="top" secondItem="UOu-IT-YFo" secondAttribute="bottom" constant="90" id="Uue-Cq-ppb"/>
+                            <constraint firstItem="qUf-9o-FdW" firstAttribute="top" secondItem="2cz-wQ-R3y" secondAttribute="top" constant="37" id="cPc-1K-Wm7"/>
+                            <constraint firstItem="qWe-L3-4tW" firstAttribute="top" secondItem="qUf-9o-FdW" secondAttribute="bottom" constant="71" id="eDE-B4-f2F"/>
+                            <constraint firstItem="2cz-wQ-R3y" firstAttribute="bottom" secondItem="2iR-GQ-68h" secondAttribute="bottom" constant="93" id="fR5-gf-kgM"/>
+                            <constraint firstItem="UOu-IT-YFo" firstAttribute="top" secondItem="qWe-L3-4tW" secondAttribute="bottom" constant="92" id="gfS-yg-xgr"/>
+                            <constraint firstItem="UOu-IT-YFo" firstAttribute="leading" secondItem="2cz-wQ-R3y" secondAttribute="leading" constant="16" id="hfq-N8-Kl3"/>
+                            <constraint firstItem="qUf-9o-FdW" firstAttribute="leading" secondItem="2cz-wQ-R3y" secondAttribute="leading" constant="16" id="ja8-5O-2yC"/>
+                            <constraint firstItem="UOu-IT-YFo" firstAttribute="top" secondItem="qWe-L3-4tW" secondAttribute="bottom" constant="92" id="roj-Jx-RXJ"/>
+                            <constraint firstItem="2iR-GQ-68h" firstAttribute="top" secondItem="UOu-IT-YFo" secondAttribute="bottom" constant="239" id="uPr-jb-NGB"/>
+                            <constraint firstItem="2cz-wQ-R3y" firstAttribute="trailing" secondItem="QZR-wL-ArJ" secondAttribute="trailing" constant="268" id="wIJ-gd-oc5"/>
+                            <constraint firstItem="qWe-L3-4tW" firstAttribute="leading" secondItem="2cz-wQ-R3y" secondAttribute="leading" constant="16" id="wxr-Zp-0Fb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2cz-wQ-R3y"/>
+                    </view>
+                    <connections>
+                        <outlet property="bYearLabel" destination="UOu-IT-YFo" id="aFD-iD-ah8"/>
+                        <outlet property="genderLable" destination="qWe-L3-4tW" id="0tA-QH-04l"/>
+                        <outlet property="massLabel" destination="QZR-wL-ArJ" id="3Lf-RA-6ry"/>
+                        <outlet property="nameLabel" destination="qUf-9o-FdW" id="bTe-A8-XCJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMW-w3-XTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1480.8" y="-75.112443778110944"/>
+        </scene>
+        <!--Films-->
+        <scene sceneID="MWE-le-b70">
+            <objects>
+                <tableViewController id="UcB-rH-BUa" customClass="MovieeTableViewController" customModule="StarWarsEncyclopedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B0U-Hc-iIc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" id="BWS-wy-M8w">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BWS-wy-M8w" id="P4Z-qJ-dmA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ktm-gi-0vC" kind="presentation" identifier="MovieViewerSegue" id="XsC-R1-ERI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UcB-rH-BUa" id="WaV-oW-KXV"/>
+                            <outlet property="delegate" destination="UcB-rH-BUa" id="bNL-Vu-429"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Films" id="EE9-Pu-kzM"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXL-tj-BVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="439" y="701"/>
+        </scene>
+        <!--Movie Viewer View Controller-->
+        <scene sceneID="Wbw-JH-fq1">
+            <objects>
+                <viewController id="ktm-gi-0vC" customClass="MovieViewerViewController" customModule="StarWarsEncyclopedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tmu-Xh-Bz6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title: Star Wars a New Hope" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhK-9q-jy2">
+                                <rect key="frame" x="16" y="79" width="312" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director: George Lucas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky3-Hr-RY8">
+                                <rect key="frame" x="16" y="169" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release: 1977-05-25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btj-7x-YDv">
+                                <rect key="frame" x="16" y="273" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdT-Vw-gkf">
+                                <rect key="frame" x="8" y="310" width="359" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="267" id="ao9-VF-GWz"/>
+                                    <constraint firstAttribute="width" constant="359" id="qt2-Vg-5U1"/>
+                                </constraints>
+                                <mutableString key="text">It is a period of civil war.\r\nRebel spaceships, striking\r\nfrom a hidden base, have won\r\ntheir first victory against\r\nthe evil Galactic Empire.\r\n\r\nDuring the battle, Rebel\r\nspies managed to steal secret\r\nplans to the Empire's\r\nultimate weapon, the DEATH\r\nSTAR, an armored space\r\nstation with enough power\r\nto destroy an entire planet.\r\n\r\nPursued by the Empire's\r\nsinister agents, Princess\r\nLeia races home aboard her\r\nstarship, custodian of the\r\nstolen plans that can save her\r\npeople and restore\r\nfreedom to the galaxy....</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1X7-7B-PmP">
+                                <rect key="frame" x="118" y="599" width="109" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Go Back"/>
+                                <connections>
+                                    <action selector="gobackButtonPress:" destination="ktm-gi-0vC" eventType="touchUpInside" id="yk7-6l-c40"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DRm-M1-DSb" firstAttribute="trailing" secondItem="ky3-Hr-RY8" secondAttribute="trailing" constant="182" id="3ay-VH-obV"/>
+                            <constraint firstItem="1X7-7B-PmP" firstAttribute="top" secondItem="HdT-Vw-gkf" secondAttribute="bottom" constant="22" id="6mO-y6-mbt"/>
+                            <constraint firstItem="ky3-Hr-RY8" firstAttribute="leading" secondItem="DRm-M1-DSb" secondAttribute="leading" constant="16" id="7gH-Dc-YCe"/>
+                            <constraint firstItem="HdT-Vw-gkf" firstAttribute="top" secondItem="btj-7x-YDv" secondAttribute="bottom" constant="16" id="Gm9-SC-Y9v"/>
+                            <constraint firstItem="DRm-M1-DSb" firstAttribute="trailing" secondItem="fhK-9q-jy2" secondAttribute="trailing" constant="47" id="NHI-tY-wHG"/>
+                            <constraint firstItem="fhK-9q-jy2" firstAttribute="leading" secondItem="DRm-M1-DSb" secondAttribute="leading" constant="16" id="Q2p-Z6-gNG"/>
+                            <constraint firstItem="DRm-M1-DSb" firstAttribute="trailing" secondItem="HdT-Vw-gkf" secondAttribute="trailing" constant="8" id="S9k-ws-fD6"/>
+                            <constraint firstItem="ky3-Hr-RY8" firstAttribute="top" secondItem="fhK-9q-jy2" secondAttribute="bottom" constant="58" id="ah9-tB-aOq"/>
+                            <constraint firstItem="1X7-7B-PmP" firstAttribute="leading" secondItem="DRm-M1-DSb" secondAttribute="leading" constant="118" id="bt9-cm-GsY"/>
+                            <constraint firstItem="fhK-9q-jy2" firstAttribute="top" secondItem="DRm-M1-DSb" secondAttribute="top" constant="59" id="c7E-5l-4UV"/>
+                            <constraint firstItem="ky3-Hr-RY8" firstAttribute="top" secondItem="fhK-9q-jy2" secondAttribute="bottom" constant="58" id="h27-br-F4O"/>
+                            <constraint firstItem="btj-7x-YDv" firstAttribute="leading" secondItem="DRm-M1-DSb" secondAttribute="leading" constant="16" id="ha7-Hf-ONm"/>
+                            <constraint firstItem="1X7-7B-PmP" firstAttribute="top" secondItem="HdT-Vw-gkf" secondAttribute="bottom" constant="22" id="mEW-dR-83i"/>
+                            <constraint firstItem="btj-7x-YDv" firstAttribute="top" secondItem="ky3-Hr-RY8" secondAttribute="bottom" constant="83" id="qgM-NK-z3K"/>
+                            <constraint firstItem="HdT-Vw-gkf" firstAttribute="leading" secondItem="DRm-M1-DSb" secondAttribute="leading" constant="8" id="se9-SZ-1aC"/>
+                            <constraint firstItem="DRm-M1-DSb" firstAttribute="bottom" secondItem="1X7-7B-PmP" secondAttribute="bottom" constant="20" id="ue5-XT-pjG"/>
+                            <constraint firstItem="DRm-M1-DSb" firstAttribute="trailing" secondItem="1X7-7B-PmP" secondAttribute="trailing" constant="148" id="v2c-R9-peC"/>
+                            <constraint firstItem="DRm-M1-DSb" firstAttribute="trailing" secondItem="btj-7x-YDv" secondAttribute="trailing" constant="197" id="w1p-hl-oNX"/>
+                            <constraint firstItem="HdT-Vw-gkf" firstAttribute="top" secondItem="btj-7x-YDv" secondAttribute="bottom" constant="16" id="xnF-4J-sVH"/>
+                            <constraint firstItem="btj-7x-YDv" firstAttribute="top" secondItem="ky3-Hr-RY8" secondAttribute="bottom" constant="83" id="yd9-9n-gFT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DRm-M1-DSb"/>
+                    </view>
+                    <connections>
+                        <outlet property="OPCLabel" destination="HdT-Vw-gkf" id="4IS-Sy-fPB"/>
+                        <outlet property="directorLabel" destination="ky3-Hr-RY8" id="O6l-X8-XZ2"/>
+                        <outlet property="releaseDateLabel" destination="btj-7x-YDv" id="tKF-ho-dSr"/>
+                        <outlet property="titleLabel" destination="fhK-9q-jy2" id="WoI-8v-Ky9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyM-fw-7sx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1480.8" y="700.29985007496259"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BfY-9C-Ekt">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rtL-ca-WSh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="est-2i-7pb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="twF-FD-Sf6" kind="relationship" relationship="viewControllers" id="2Hh-Dg-djo"/>
+                        <segue destination="UcB-rH-BUa" kind="relationship" relationship="viewControllers" id="67F-7o-ru5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Zh-A6-SEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500" y="-52.623688155922046"/>
         </scene>
     </scenes>
 </document>
